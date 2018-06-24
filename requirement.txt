@@ -1,0 +1,13 @@
+click==6.7
+elasticsearch==6.3.0
+elasticsearch-dsl==6.1.0
+Flask==1.0.2
+flask-paginate==0.5.1
+ipaddress==1.0.22
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+python-dateutil==2.7.3
+six==1.11.0
+urllib3==1.23
+Werkzeug==0.14.1

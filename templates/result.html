@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>查询结果</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/result.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}" type="text/css" />
+    <script src="{{ url_for('static',filename="js/bootstrap.min.js") }}"></script>
+    <script src="{{ url_for('static',filename="js/jquery.min.js") }}"></script>
+</head>
+
+<body>
+<div class="web-name">
+    社工库查询结果
+</div>
+
+<div class="div-table-cls">
+    <div class="time-cls">
+        <span class="total">数据条数: {{ total_nums }}</span>
+        <span class="last_seconds">查询时间：{{ last_seconds }}</span>
+    </div>
+    <table border="1" class="table-cls">
+      <tr>
+        <th>文件</th>
+        <th>来源</th>
+        <th>数据</th>
+        <th>打分</th>
+      </tr>
+        {% for hit in hit_list %}
+      <tr>
+        <td>{{ hit.file }}</td>
+        <td>{{ hit.from }}</td>
+        <td>{{ hit.data }}</td>
+        <td>{{ hit.score }}</td>
+      </tr>
+        {% endfor %}
+    </table>
+</div>
+
+    <div style="text-align: center">
+        {{ pagenation.links }}
+    </div>
+</body>
+</html>
